@@ -27,14 +27,14 @@ class ScannerImport {
                     e.preventDefault();
                     console.log('e.key', e.key);
                     console.log('e', e);
-                        const x = document.getElementById('list'); 
+                        
+                }
+                const x = document.getElementById('list'); 
                     const l = document.createElement('li');
       
-                        l.innerText = '' + JSON.stringify(e) + '';
+                        l.innerText = 'code:' + e.code + ' key: ' + e.key + '';
       
                       x.appendChild(l);
-                }
-
                 this.tempBarcodeString += e.key;
                 this.fullBarcodeString += e.key;
               console.log(this.tempBarcodeString);
