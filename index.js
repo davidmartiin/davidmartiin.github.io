@@ -8,7 +8,7 @@ class ScannerImport {
         scanInProgress = false;
         scannerInput = document.getElementById('scannerInput');
         parseScannerItemsToString = (e) => {
-            this.scannerInput.focus({preventScrolling: true, focusVisible: false});
+            //this.scannerInput.focus({preventScroll: true, focusVisible: false});
             if (e.code == 'Enter') {
                 this.products.push(this.tempBarcodeString.toUpperCase());
                 this.tempBarcodeString = "";
@@ -45,7 +45,7 @@ class ScannerImport {
         checkProgress = (len) => {
             if (this.fullBarcodeString.length === len && this.barcodeProcessedflag === false) {
                 this.barcodeProcessedflag = true;
-                document.removeEventListener("keypress", this.parseScannerItemsToString);
+                document.removeEventListener("keydown", this.parseScannerItemsToString);
 
                this.controlMethod();
             }
@@ -72,4 +72,4 @@ class ScannerImport {
 }
 
 const x = new ScannerImport();
-document.addEventListener("keypress", x.parseScannerItemsToString); 
+document.addEventListener("keydown", x.parseScannerItemsToString); 
