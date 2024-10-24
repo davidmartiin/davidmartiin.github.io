@@ -27,6 +27,12 @@ class ScannerImport {
                     e.preventDefault();
                     console.log('e.key', e.key);
                     console.log('e', e);
+                        const x = document.getElementById('list'); 
+                    const l = document.createElement('li');
+      
+                        l.innerText = '' + e.preventDefault + '';
+      
+                      x.appendChild(l);
                 }
 
                 this.tempBarcodeString += e.key;
