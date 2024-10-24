@@ -8,7 +8,7 @@ class ScannerImport {
         scanInProgress = false;
         scannerInput = document.getElementById('scannerInput');
         parseScannerItemsToString = (e) => {
-            scannerInput.focus(true);
+            this.scannerInput.focus(true);
             if (e.code == 'Enter') {
                 this.products.push(this.tempBarcodeString.toUpperCase());
                 this.tempBarcodeString = "";
