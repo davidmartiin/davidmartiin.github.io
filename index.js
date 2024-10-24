@@ -46,6 +46,7 @@ class ScannerImport {
         checkProgress = (len) => {
             if (this.fullBarcodeString.length === len && this.barcodeProcessedflag === false) {
                 this.barcodeProcessedflag = true;
+                    //document.removeEventListener("keypress", this.parseScannerItemsToString);
                 document.removeEventListener("keydown", this.parseScannerItemsToString);
 
                this.controlMethod();
@@ -73,4 +74,5 @@ class ScannerImport {
 }
 
 const x = new ScannerImport();
+//document.addEventListener("keypress", x.parseScannerItemsToString); 
 document.addEventListener("keydown", x.parseScannerItemsToString); 
