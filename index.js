@@ -9,6 +9,8 @@ class ScannerImport {
         scannerInput = document.getElementById('scannerInput');
         parseScannerItemsToString = (e) => {
             //this.scannerInput.focus({preventScroll: true, focusVisible: false});
+
+                if(e.code == 'LeftShift' || e.key == "Shift"){ return; }
             if (e.code == 'Enter') {
                 this.products.push(this.tempBarcodeString.toUpperCase());
                 this.tempBarcodeString = "";
