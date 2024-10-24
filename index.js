@@ -30,7 +30,7 @@ class ScannerImport {
                         const x = document.getElementById('list'); 
                     const l = document.createElement('li');
       
-                        l.innerText = '' + JSON.Stringify(e) + '';
+                        l.innerText = '' + JSON.stringify(e) + '';
       
                       x.appendChild(l);
                 }
