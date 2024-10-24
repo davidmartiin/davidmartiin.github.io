@@ -23,14 +23,14 @@ class ScannerImport {
             } else {
               
                 //Prevent the page from scrolling
-                if (e.code == "Space") {
+                if (e.code == "Space" || e.key == " ") {
                     e.preventDefault();
                     console.log('e.key', e.key);
                     console.log('e', e);
                         const x = document.getElementById('list'); 
                     const l = document.createElement('li');
       
-                        l.innerText = '' + e.defaultPrevented + '';
+                        l.innerText = '' + e.toString() + '';
       
                       x.appendChild(l);
                 }
