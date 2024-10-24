@@ -1,8 +1,8 @@
 class ScannerImport {
         //Data Management
         products = [];
-        fullBarcodeString: string = "";
-        tempBarcodeString: string = "";
+        fullBarcodeString = "";
+        tempBarcodeString = "";
         
         barcodeProcessedflag = false;
         scanInProgress = false;
