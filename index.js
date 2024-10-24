@@ -12,7 +12,7 @@ class ScannerImport {
             if (e.code == 'Enter') {
                 this.products.push(this.tempBarcodeString.toUpperCase());
                 this.tempBarcodeString = "";
-
+                //testComment
 
                 const lengthToCheck = this.fullBarcodeString.length;
 
